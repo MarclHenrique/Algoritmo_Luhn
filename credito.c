@@ -25,7 +25,7 @@ int main()
         }
     } while (valor < 1);
 
-// COME�ANDO PELO PENÚLTIMO NÚMERO E MULTIPLICANDO POR 2
+    // COMEÇANDO PELO PENÚLTIMO NÚMERO E MULTIPLICANDO POR 2
 
     card_1 = ((valor % 100)/10 * 2);
     card_2 = ((valor % 10000)/1000 * 2);
@@ -36,7 +36,7 @@ int main()
     card_7 = ((valor % 100000000000000)/10000000000000 * 2);
     card_8 = ((valor % 10000000000000000)/1000000000000000 * 2);
 
-//TRANSFORMANDO OS N�MEROS DECIMAIS EM UNIDADE E SOMANDO
+    //TRANSFORMANDO OS NÚMEROS DECIMAIS EM UNIDADE E SOMANDO
 
     card_1 = (card_1 % 100)/10 + (card_1 % 10);
     card_2 = (card_2 % 100)/10 + (card_2 % 10);
@@ -49,7 +49,7 @@ int main()
 
     int sum_one = card_1 + card_2 + card_3 + card_4 + card_5 + card_6 + card_7 + card_8;
 
-// PEGANDO OS VALORES QUE N�O FORAM SOMADOS E SOMANDO ELES A SI MESMOS
+    // PEGANDO OS VALORES QUE N�O FORAM SOMADOS E SOMANDO ELES A SI MESMOS
 
     card_9 = (valor % 10);
     card_10 = ((valor % 1000)/100);
@@ -63,23 +63,23 @@ int main()
     int sum_two = card_9 + card_10 + card_11 + card_12 + card_13 + card_14 + card_15 + card_16;
     int sum_final = (sum_one + sum_two);
 
-// ANALISAMOS SE O CART�O TEM O FINAL 0
+    // ANALISAMOS SE O CARTÃO TEM O FINAL 0
     int validacao = sum_final % 10;
 
-// INICIALIZANDO VARI�VEIS UTILIZADAS A SEGUIR
+    // INICIALIZANDO VARIÁVEIS UTILIZADAS A SEGUIR
     int tam = 0;
     long visa = valor;
     long amex = cartao;
     long master = cartao;
 
-// Estrtura para descobrir a quantidade de d�gitos
+    // Estrtura para descobrir a quantidade de dÍgitos
     while (cartao > 0)
     {
     cartao = cartao/10;
     tam ++;
     }
 
-// IDENTIFICANDO CART�O VISA
+    // IDENTIFICANDO CARTÃO VISA
     while (visa >= 10)
     {
        visa /= 10;
@@ -90,7 +90,7 @@ int main()
         printf("%s\n", "Cartão VISA");
         return 0;
     }
-// IDENTIFICANDO CART�O AMEX
+    // IDENTIFICANDO CARTÃO AMEX
     while (amex >= 10000000000000)
     {
         amex /= 10000000000000;
@@ -100,7 +100,7 @@ int main()
         printf("%s\n", "Cartão AMEX");
         return 0;
     }
-// IDENTIFICANDO CART�O MASTER
+    // IDENTIFICANDO CARTÃO MASTER
     while (master >= 10000000000000)
     {
         master /= 10000000000000;
